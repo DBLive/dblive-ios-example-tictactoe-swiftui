@@ -2,7 +2,7 @@
 iOS example using DBLive to play Tic-Tac-Toe with another player.
 
 ## Run
-Simply run this in a simulator to see how it works. 
+You can run this in a simulator to see how it works. Run it in 2 different simulators to see how data is instantly updated across devices.
 
 **AppDelegate.swift**
 
