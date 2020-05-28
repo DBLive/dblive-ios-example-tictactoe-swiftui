@@ -19,4 +19,4 @@ private let dbLiveKey = "tic-tac-toe-example"
 ```
 
 ## DBLive
-[DBLive - Client (iOS/maxOS)](https://github.com/DBLive/dblive-client-ios-macos)
+[DBLive - Client (iOS/macOS)](https://github.com/DBLive/dblive-client-ios-macos)
