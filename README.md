@@ -10,20 +10,6 @@ You can also run the simulator along with the example web app to see the tic-tac
 
 [https://tictactoe.dblive.io](https://tictactoe.dblive.io)
 
-**AppDelegate.swift**
-
-You can change the appKey to one of your own.
-```swift
-let dbLive = DBLiveClient(appKey: "+EzwYKZrXI7eKn/KRtlhURsGsjyP2e+1++vqTDQH")
-```
-
-**TicTacToe.swift**
-
-The example only uses one key, which you can change to whatever you want.
-```swift
-private let dbLiveKey = "tic-tac-toe-example"
-```
-
 ## DBLive
 [DBLive - Client (iOS/macOS)](https://github.com/DBLive/dblive-client-ios-macos)
 

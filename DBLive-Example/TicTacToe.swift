@@ -22,6 +22,8 @@ class TicTacToe: ObservableObject {
 	private let dbLive = AppDelegate.instance.dbLive
 	private let dbLiveKey = "tic-tac-toe-example"
 	
+	private var dbLiveKeyListener: DBLiveKeyEventListener!
+	
 	private var allSquares: [TicTacToeSquare] {
 		get {
 			var squares: [TicTacToeSquare] = []
@@ -35,7 +37,7 @@ class TicTacToe: ObservableObject {
 	}
 	
 	init() {
-		dbLive.getJsonAndListen(dbLiveKey) { [weak self] data in
+		dbLiveKeyListener = dbLive.getJsonAndListen(dbLiveKey) { [weak self] data in
 			guard let this = self else { return }
 
 			this.loadBoard(data ?? [:])
@@ -87,6 +89,10 @@ class TicTacToe: ObservableObject {
 				board[row][column] = TicTacToeSquare.from(json: data, row: row, column: column)
 			}
 		}
+	}
+	
+	deinit {
+		dbLiveKeyListener.isListening = false
 	}
 	
 }
